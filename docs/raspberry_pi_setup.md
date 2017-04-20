@@ -38,5 +38,5 @@ $ sudo dd bs=1m if=`ls *-raspbian-jessie.img` of=/dev/rdisk3
 In order to get Raspbian up and running without using the keyboard, mouse or dispay hooked up tho the Raspberry Pi, the network needs to be configured to allow remote access (ssh and vnc) to the Raspberry Pi once it is booted up.
 
 # References
-* https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
-* https://caffinc.github.io/2016/12/raspberry-pi-3-headless/
+* [https://www.raspberrypi.org/documentation/installation/installing-images/mac.md]
+* [https://caffinc.github.io/2016/12/raspberry-pi-3-headless/]
