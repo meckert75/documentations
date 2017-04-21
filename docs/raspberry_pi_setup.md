@@ -1,5 +1,5 @@
 # Setting up a Raspberry Pi (Mac)
-Instructions on how to setup a Raspberry Pi without keyboard, mouse or monitor using a Mac. We'll be using the command line which can be useful if you'd want to automate the process and tie it all together in a script.
+Instructions on how to setup a Raspberry Pi without dedicated keyboard, mouse or monitor using a Mac. We'll be using the command line which can be useful if you'd want to automate the process and tie it all together in a script.
 
 **Warning:** Using the command line can be risky if not familiar with using it. In particular when it comes to reading and writing the disk where a mistake can lead to corupting or erasing your OS.
 
@@ -32,11 +32,30 @@ Write disk image to SD card (use disk number identified in the list above, note 
 ```bash
 $ diskutil unmountDisk /dev/disk3
 $ sudo dd bs=1m if=`ls *-raspbian-jessie.img` of=/dev/rdisk3
+$ touch /Volumes/boot/ssh
 ```
+The last step is to enable ssh on the Raspberry Pi in order to be able to remotely access it through the network.
 
-## Setup Networking
-In order to get Raspbian up and running without using the keyboard, mouse or dispay hooked up tho the Raspberry Pi, the network needs to be configured to allow remote access (ssh and vnc) to the Raspberry Pi once it is booted up.
+### Raspberry Pi Zero W Only
+Since the Raspberry Pi Zero W doesn't have an ethernet port a connection must be made through the USB port. For that a couple more files must be touched.
+```bash
+$ echo "dtoverlay=dwc2" >> /Volumes/boot/config.txt
+$ sed -i -e "s/\(rootwait\)/\1 modules-load=dwc2,g_ether/" /Volumes/boot/cmdline.txt
+```
+Instead of hooking it up to the ethernet, the Raspberry Pi Zero W will connect to a USB port of the Mac.
+
+## Final Steps
+Take the SD card and insert it into the Raspberry Pi, connect the Pi to the network via ethernet and connect it to the power to boot it up.
+
+Log into the Raspberry from the Mac.
+```bash
+$ ssh ssh pi@raspberrypi.local
+$ sudo raspi-config
+```
+The default password is `raspberry`. Changing the default password should be the first configuration change. 
 
 # References
 * [www.raspberrypi.org/documentation/installation/installing-images/mac.md](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md)
+* [www.raspberrypi.org/documentation/remote-access/ssh/](https://www.raspberrypi.org/documentation/remote-access/ssh/)
 * [caffinc.github.io/2016/12/raspberry-pi-3-headless/](https://caffinc.github.io/2016/12/raspberry-pi-3-headless/)
+* [www.thepolyglotdeveloper.com/2016/06/connect-raspberry-pi-zero-usb-cable-ssh/](https://www.thepolyglotdeveloper.com/2016/06/connect-raspberry-pi-zero-usb-cable-ssh/)
