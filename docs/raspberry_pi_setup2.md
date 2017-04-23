@@ -46,7 +46,17 @@ Unmount device
 ```bash
 $ sudo umount /etc/sda1 /etc/sda2
 ```
-Stick the Micro SD card into the new Raspberry Pi and boot it up.
+Stick the Micro SD card into the new Raspberry Pi and boot it up. After a about 30 - 60 seconds the new Raspberry Pi will be online. Default password will be `raspberry`. Change the password.
+
+```bash
+$ ssh pi@mynewpi.local
+pi@mynewpi:~ $ passwd 
+Changing password for pi.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+```
 
 # References
 * [caffinc.github.io/2016/12/raspberry-pi-3-headless/](https://caffinc.github.io/2016/12/raspberry-pi-3-headless/)
