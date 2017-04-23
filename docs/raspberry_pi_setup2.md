@@ -38,7 +38,7 @@ $ sudo sh -c 'wpa_passphrase Pegasus-N Shawshank >> /media/pi/raspbian/etc/wpa_s
 ```
 Assign a different hostname for the new Pi (optional but necessary if there is another Pi named `raspberrypi` on the network)
 ```bash
-$ sudo sed -i -e "s/raspberrypi/pizero/" /media/pi/raspbian/etc/hosts /media/pi/raspbian/etc/hostname
+$ sudo sed -i -e "s/raspberrypi/mynewpi/" /media/pi/raspbian/etc/hosts /media/pi/raspbian/etc/hostname
 ```
 
 ## Finish Up
