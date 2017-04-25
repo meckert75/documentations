@@ -32,9 +32,9 @@ SSH will allow you to log into the Raspberry Pi remotely.
 ```bash
 $ sudo touch /media/pi/boot/ssh
 ```
-Useful in particular when setting up Raspbian for Raspberry Pi Zero W that doesn't have an Ethernet port to connect to. 
+Useful in particular when setting up Raspbian for Raspberry Pi Zero W that doesn't have an Ethernet port to connect to. Replace `NetworkName` and `password` with the settings for your network.
 ```bash
-$ sudo sh -c 'wpa_passphrase Pegasus-N Shawshank >> /media/pi/raspbian/etc/wpa_supplicant/wpa_supplicant.conf'
+$ sudo sh -c 'wpa_passphrase NetworkName password >> /media/pi/raspbian/etc/wpa_supplicant/wpa_supplicant.conf'
 ```
 Assign a different hostname for the new Pi (optional but necessary if there is another Pi named `raspberrypi` on the network)
 ```bash
