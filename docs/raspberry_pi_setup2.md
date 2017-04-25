@@ -46,7 +46,7 @@ By default the locale enabled on the Raspberry Pi is `en_GB.UTF-8`. Make sure th
 ```bash
 $ locale=en_US.UTF-8
 $ sudo sed -i -e "s/# \(${locale}\)/\1/g" /media/pi/raspbian/etc/locale.gen
-$ sudo sh -c "echo 'LANG=$locale' > /etc/locale.conf"
+$ sudo sh -c "echo 'LANG=$locale' > /media/pi/raspbian/etc/locale.conf"
 ```
 
 ## Finish Up
