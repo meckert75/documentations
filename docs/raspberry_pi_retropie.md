@@ -10,7 +10,7 @@ Use method best suited to personal constraints
 Connect to the Raspberry Pi and initiate the installation of RetroPie
 ```bash
 $ ssh pi@raspberrypi.local
-$ sudo apt-get update && sudo apt-get upgrade
+$ sudo apt-get update && sudo apt-get upgrade -y
 $ 
 ```
 
