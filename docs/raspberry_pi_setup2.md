@@ -41,6 +41,12 @@ Assign a different hostname for the new Pi (optional but necessary if there is a
 $ sudo sed -i -e "s/raspberrypi/mynewpi/" /media/pi/raspbian/etc/hosts /media/pi/raspbian/etc/hostname
 ```
 
+### Setting the Locale
+By default the locale enabled on the Raspberry Pi is `en_GB.UTF-8`. Make sure the desired locale is available to the Raspberry Pi by enabling (commenting out) the line in the `locale.gen` file.
+```bash
+$ locale=en_US.UTF-8; sudo sed -i -e "s/# \(${locale}\)/\1/g" /media/pi/raspbian/etc/locale.gen
+```
+
 ## Finish Up
 Unmount device
 ```bash
