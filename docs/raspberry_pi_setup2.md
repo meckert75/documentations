@@ -52,7 +52,7 @@ $ sudo sh -c "echo 'LANG=$locale' > /media/pi/raspbian/etc/locale.conf"
 ## Finish Up
 Unmount device
 ```bash
-$ sudo umount /etc/sda1 /etc/sda2
+$ sudo umount /dev/sda1 /dev/sda2
 ```
 Stick the Micro SD card into the new Raspberry Pi and boot it up. After a about 30 - 60 seconds the new Raspberry Pi will be online. Default password will be `raspberry`. Change the password.
 
