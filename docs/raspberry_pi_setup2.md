@@ -42,9 +42,11 @@ $ sudo sed -i -e "s/raspberrypi/mynewpi/" /media/pi/raspbian/etc/hosts /media/pi
 ```
 
 ### Setting the Locale
-By default the locale enabled on the Raspberry Pi is `en_GB.UTF-8`. Make sure the desired locale is available to the Raspberry Pi by enabling (commenting out) the line in the `locale.gen` file.
+By default the locale enabled on the Raspberry Pi is `en_GB.UTF-8`. Make sure the desired locale is available to the Raspberry Pi by enabling (commenting out) the line in the `locale.gen` file. To check which locales are enabled, run `localedef --list-archive`.
 ```bash
-$ locale=en_US.UTF-8; sudo sed -i -e "s/# \(${locale}\)/\1/g" /media/pi/raspbian/etc/locale.gen
+$ locale=en_US.UTF-8
+$ sudo sed -i -e "s/# \(${locale}\)/\1/g" /media/pi/raspbian/etc/locale.gen
+$ sudo sh -c "echo 'LANG=$locale' > /etc/locale.conf"
 ```
 
 ## Finish Up
@@ -66,3 +68,4 @@ passwd: password updated successfully
 
 # References
 * [caffinc.github.io/2016/12/raspberry-pi-3-headless/](https://caffinc.github.io/2016/12/raspberry-pi-3-headless/)
+* [wiki.archlinux.org/index.php/locale](https://wiki.archlinux.org/index.php/locale)
