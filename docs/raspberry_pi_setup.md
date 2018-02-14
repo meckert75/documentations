@@ -1,7 +1,7 @@
 # Setting up a Raspberry Pi (Mac)
 Instructions on how to setup a Raspberry Pi without dedicated keyboard, mouse or monitor using a Mac. We'll be using the command line which can be useful if you'd want to automate the process and tie it all together in a script.
 
-**Warning:** Using the command line can be risky if not familiar with using it. In particular when it comes to reading and writing the disk where a mistake can lead to corupting or erasing your OS.
+**Warning:** Using the command line can be risky if not familiar with using it. In particular when it comes to reading and writing the disk where a mistake can lead to corrupting or erasing your OS.
 
 ## Get the latest Raspbian Image
 Download and inflate the ZIP file. The URL use is the one for Raspbian Jessie with PIXEL to get Raspbian Jessie Lite instead use: `https://downloads.raspberrypi.org/raspbian_lite_latest`
