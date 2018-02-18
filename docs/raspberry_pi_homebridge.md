@@ -58,6 +58,17 @@ sudo apt-get install libavahi-compat-libdnssd-dev
 sudo npm install -g --unsafe-perm homebridge
 ```
 
+**Note**
+
+In some instances the `homebridge` executable isn't properly symlinked to `/usr/bin/homebridge`. If that should be the case the symlink needs to be added manually. The installed executable might be in on of the following locations:
+* `/usr/lib/node_modules/homebridge/bin/homebridge`
+* `/opt/node/lib/node_modules/homebridge/bin/homebridge`
+
+Create the symlink manually. Example:
+```
+sudo ln -s /opt/node/lib/node_modules/homebridge/bin/homebridge /usr/bin/homebridge
+```
+
 ## Install Homebridge Plugins
 Find Homebridge plugins by searching for `homebridge-plugin` in the [NPM package repository](https://www.npmjs.com/search?q=homebridge-plugin).
 
