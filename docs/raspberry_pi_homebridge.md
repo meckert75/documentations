@@ -60,3 +60,11 @@ sudo npm install -g --unsafe-perm homebridge
 
 ## Install Homebridge Plugins
 Find Homebridge plugins by searching for `homebridge-plugin` in the [package repository](https://www.npmjs.com/search?q=homebridge-plugin).
+
+If you're going to tinker with your Raspberry, a good first plugin to install would be the [GPIO Switch plugin](https://www.npmjs.com/package/homebridge-gpioswitch).
+
+```
+npm install -g homebridge-gpio
+```
+
+
