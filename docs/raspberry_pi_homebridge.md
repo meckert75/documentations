@@ -29,3 +29,12 @@ ssh pi@myraspi.local
 sudo apt-get update
 sudo apt-get upgrade
 ```
+
+## Install Node.js and other Dependencies
+```
+# Install Node.js
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+# Other dependencies
+sudo apt-get install libavahi-compat-libdnssd-dev
+```
