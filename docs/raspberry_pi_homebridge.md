@@ -11,7 +11,7 @@ might be additional steps to get everything running.
 
 **Prerequisit**
 
-Install Raspbian on a Micro SD card for the Raspberry Pi:
+Install Raspbian on a Micro SD card for the Raspberry Pi 3 or Zero W:
 * [Setting up a Raspberry Pi](raspberry_pi_setup.md) _or_
 * [Setting Up Raspberry Pi using a Raspberry Pi](raspberry_pi_setup2.md)
 
@@ -30,11 +30,24 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-## Install Node.js and other Dependencies
+## Install Node.js
+### For Raspberry Pi 3 (armv7l)
 ```
-# Install Node.js
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
-# Other dependencies
+```
+
+### For Raspberry Pi Zero W (armv6l)
+```
+wget https://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-armv6l.tar.xz
+tar xJvf node-v6.9.5-linux-armv6l.tar.xz
+sudo mkdir -p /opt/node
+sudo mv node-v6.9.5-linux-armv6l/* /opt/node/
+sudo update-alternatives --install "/usr/bin/node" "node" "/opt/node/bin/node" 1
+sudo update-alternatives --install "/usr/bin/npm" "npm" "/opt/node/bin/npm" 1
+```
+
+## Install Dependencies
+```
 sudo apt-get install libavahi-compat-libdnssd-dev
 ```
