@@ -38,12 +38,12 @@ sudo apt-get install -y nodejs
 ```
 
 ### For Raspberry Pi Zero W (armv6l)
-Check [https://nodejs.org/dist/] for the latest `v6.*` `armv6l` version.
+Check https://nodejs.org/dist/ for the latest version for `armv6l`.
 ```
-wget https://nodejs.org/dist/v6.13.0/node-v6.13.0-linux-armv6l.tar.xz
-tar xJvf node-v6.13.0-linux-armv6l.tar.xz
+wget https://nodejs.org/dist/latest-v8.x/node-v8.9.4-linux-armv6l.tar.gz
+tar xJvf node-v8.9.4-linux-armv6l.tar.gz
 sudo mkdir -p /opt/node
-sudo mv node-v6.13.0-linux-armv6l/* /opt/node/
+sudo mv node-v8.9.4-linux-armv6l/* /opt/node/
 sudo update-alternatives --install "/usr/bin/node" "node" "/opt/node/bin/node" 1
 sudo update-alternatives --install "/usr/bin/npm" "npm" "/opt/node/bin/npm" 1
 ```
@@ -58,3 +58,5 @@ sudo apt-get install libavahi-compat-libdnssd-dev
 sudo npm install -g --unsafe-perm homebridge
 ```
 
+## Install Homebridge Plugins
+Find Homebridge plugins by searching for `homebridge-plugin` in the [package repository](https://www.npmjs.com/search?q=homebridge-plugin).
