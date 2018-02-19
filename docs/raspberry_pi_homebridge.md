@@ -178,6 +178,17 @@ Paste the following inside the outermost brackets, after the `"description"` pro
 sudo chown homebridge /var/lib/homebridge/config.json
 ```
 
+## Start the Homebridge Service
+```
+sudo systemctl daemon-reload
+sudo systemctl enable homebridge
+sudo systemctl start homebridge
+```
 
+## Verification and Trouble Shooting
 
+Check that the service is running
+```
+systemctl status homebridge
+```
 
