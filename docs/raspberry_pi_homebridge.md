@@ -166,7 +166,7 @@ Paste the following inside the outermost brackets, after the `"description"` pro
 ```
     "accessories": [
         {
-            "accessory": "GPIOSWITCH",
+            "accessory": "homebridge-gpio.GPIO",
             "name": "Raspberry Switch",
             "pin": 7
         }
