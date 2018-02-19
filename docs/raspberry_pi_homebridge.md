@@ -75,7 +75,7 @@ Find Homebridge plugins by searching for `homebridge-plugin` in the [NPM package
 If you're going to tinker with your Raspberry, a good first plugin to install would be the [GPIO Switch plugin](https://www.npmjs.com/package/homebridge-gpioswitch).
 
 ```
-npm install -g homebridge-gpio
+sudo npm install -g homebridge-gpio
 ```
 
 ## Prepare to run Homebridge
