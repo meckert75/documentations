@@ -132,10 +132,51 @@ WantedBy=multi-user.target
 
 ## Create the Config File
 
+### New Config File
 ```
 sudo vim /var/lib/homebridge/config.json
 ```
-If there is an existing config file that was set up in the default location, copy that 
+
+Paste these lines (change properties to any other value):
+```
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "24:40:CE:FF:C1:57",
+        "port": 51826,
+        "pin": "110-36-153"
+    },
+    
+    "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
+}
+```
+
+### Existing Config File
+If there is an existing config file that was set up previously in the default location, copy that to the Homebridge directory.
+```
+sudo cp ~/.homebridge/config.json /var/lib/homebridge/config.json
+```
+
+### Add Plug-in Configuration
+
+Going with the [GPIO Plug-in](https://www.npmjs.com/package/homebridge-gpioswitch) from above, the below plug-in example is to configure that module. Consult your Plug-in documentation for any other installed Homebridge Plug-in.
+
+Paste the following inside the outermost brackets, after the `"description"` property:
+```
+    "accessories": [
+        {
+            "accessory": "GPIOSWITCH",
+            "name": "Raspberry Switch",
+            "pin": 7
+        }
+    ]
+```
+
+### Change Config File Ownership
+```
+sudo chown homebridge /var/lib/homebridge/config.json
+```
+
 
 
 
