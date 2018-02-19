@@ -98,11 +98,12 @@ sudo vim /etc/default/homebridge
 Paste these lines:
 ```
 # Defaults / Configuration options for homebridge
-# The following settings tells homebridge where to find the config.json file and store device and accessory data.
+# The following settings tells homebridge where to find the config.json file and store device and
+# accessory data.
 HOMEBRIDGE_OPTS=-U /var/lib/homebridge
 
-# Uncomment the DEBUG line if homebridge shoule write less logs. Useful at the beginning when getting started
-# to have more info if something goes wrong. View logs using: sudo journalctl -f -u homebridge
+# Uncomment the DEBUG line if homebridge shoule write less logs. Useful at the beginning when getting
+# started to have more info if something goes wrong. View logs using: sudo journalctl -f -u homebridge
 DEBUG=*
 ```
 
