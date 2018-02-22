@@ -44,7 +44,7 @@ $ sudo sed -i -e "s/raspberrypi/mynewpi/" /media/pi/raspbian/etc/hosts /media/pi
 ### Setting Keyboard Layout
 This will not be applicable if you only will be working with the Pi through a `ssh` connection but if you have the need to connect the Pi to a TV and operate it with a keyboard and mouse, you will want to change the default keybaord layout which is going to be set to `gb`.
 ```bash
-$ sudo sed -i -e "s/XKBLAYOUT=\"..\"/XKBLAYOUT=\"us\"/" /etc/default/keyboard
+$ sudo sed -i -e "s/XKBLAYOUT=\"..\"/XKBLAYOUT=\"us\"/" /media/pi/raspbian/etc/default/keyboard
 ```
 
 ### Setting the Locale
