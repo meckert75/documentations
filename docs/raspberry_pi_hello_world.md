@@ -44,6 +44,29 @@ Putting it all together, the following diagram shows the RGB LED connected to GP
 
 ![RGB LED connected to Raspberry Pi](images/raspberry_rgp_led_diagram.svg)
 
+## Controlling the LED
+
+Power up the Raspberry Pi and open a `ssh` connection to the Pi. The simplest way to control the GPIOs is using the `gpio` command.
+
+First set the GPIO mode of the used pins to output (write). The default of the GPIOs is input (read).
+
+```
+gpio -g mode 17 out
+gpio -g mode 27 out
+gpio -g mode 22 out
+```
+
+The pins are ready to be written to.
+
+```
+gpio -g write 17 1 # turn on red
+gpio -g write 17 0 # turn off red
+gpio -g write 27 1 # turn on green
+gpio -g write 27 0 # turn off green
+gpio -g write 22 1 # turn on blue
+gpio -g write 17 1 # turn on red (turns LED purple)
+```
+
 # References
 
 * [RGB LED Datasheet](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)
