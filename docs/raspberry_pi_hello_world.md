@@ -25,3 +25,21 @@ In order to choose the right resistor, the specs for the LED need to be known, m
 | Red      | 2 V                | 20 mA               |
 | Green    | 3 V                | 20 mA               |
 | Blue     | 3 V                | 20 mA               |
+
+The Raspberry Pi GPIO pins, which are the source for the LED, have a voltage of 3.3 V. Taking this data, the formula to compute the needed resitor is as followed.
+
+![LED resistor formula](images/led_resistor_formula.svg)
+
+Using the formula, the resistors needed for the circuit are:
+
+| Color   | Resistor   |
+|---------|------------|
+| Red     | 65 Ω       |
+| Green   | 15 Ω       |
+| Blue    | 15 Ω       |
+
+
+
+# References
+
+* [RGB LED Datasheet](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)
