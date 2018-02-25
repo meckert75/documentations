@@ -30,7 +30,7 @@ The Raspberry Pi GPIO pins, which are the source for the LED, have a voltage of 
 
 ![LED resistor formula](images/led_resistor_formula.svg)
 
-Using the formula, the resistors values can be calculated. To find the right resistor, use the [resistor color calculator](http://www.resistorguide.com/resistor-color-code-calculator/).
+Using the formula, the resistors values can be calculated. To find the right resistor, use the [resistor color calculator](http://www.resistorguide.com/resistor-color-code-calculator/). The exact resistor might not be readily available in which case picking the nearest larger resistor will still work. For example, if the result of the calculation asks for a 65 Ω resistor, a 68 Ω resistor will do if that's what is available.
 
 | Color   | Resistor   | Resistor Color Code   |
 |---------|------------|-----------------------|
