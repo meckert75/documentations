@@ -46,6 +46,8 @@ Putting it all together, the following diagram shows the RGB LED connected to GP
 
 ## Controlling the LED
 
+### Using the `gpio` Utility
+
 Power up the Raspberry Pi and open a `ssh` connection to the Pi. The simplest way to control the GPIOs is using the `gpio` command.
 
 First set the GPIO mode of the used pins to output (write). The default of the GPIOs is input (read).
@@ -104,7 +106,7 @@ This will print the status of all pins of the Raspberry Pi.
  +-----+-----+---------+------+---+-Pi ZeroW-+---+------+---------+-----+-----+
 ```
 
-Control the Raspberry Pi using Python.
+### Using Python Library
 
 Create a Python script `vim blink_led.py` and paste the below code.
 
