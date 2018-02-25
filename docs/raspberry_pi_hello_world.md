@@ -13,6 +13,15 @@ The resistor is connected into the circuit to control the current that flows fro
 
 The LED (Light Emitting Diode) is as its name says a diode which allows current to flow in one direction only, so if the plus and minus are connected the wrong way, the LED won't light up.
 
-In order to choose the right resistor, the specs for the LED need to be known
+A RGB LED is essentially three LEDs in a single package and as such has three connectros for each color and a shared ground.
+Each of the colors will need a resistor.
 
 ![RGB LED Schema](images/rgb_led_diagram.svg)
+
+In order to choose the right resistor, the specs for the LED need to be known, meaning the forward voltage and forward current are needed. The [RGB LED](https://smile.amazon.com/gp/product/B01C19ENDM) used in the example here has the specs:
+
+| Color    | Forward Voltage    | Forward Current     |
+-------------------------------------------------------
+| Red      | 2 V                | 20 mA               |
+| Green    | 3 V                | 20 mA               |
+| Blue     | 3 V                | 20 mA               |
