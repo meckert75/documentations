@@ -38,7 +38,11 @@ Using the formula, the resistors values can be calculated. To find the right res
 | Green   | 15 Ω       | ![15 ohm](images/15_ohm.png)   |
 | Blue    | 15 Ω       | ![15 ohm](images/15_ohm.png)   |
 
+## Connecting it All
 
+Putting it all together, the following diagram shows the RGB LED connected to GPIO 17, 22 and 27 respectively.
+
+![RGB LED connected to Raspberry Pi](images/raspberry_rgp_led_diagram.svg)
 
 # References
 
