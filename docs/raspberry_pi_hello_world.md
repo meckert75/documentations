@@ -21,7 +21,7 @@ Each of the colors will need a resistor.
 In order to choose the right resistor, the specs for the LED need to be known, meaning the forward voltage and forward current are needed. The [RGB LED](https://smile.amazon.com/gp/product/B01C19ENDM) used in the example here has the specs:
 
 | Color    | Forward Voltage    | Forward Current     |
--------------------------------------------------------
+|----------|--------------------|---------------------|
 | Red      | 2 V                | 20 mA               |
 | Green    | 3 V                | 20 mA               |
 | Blue     | 3 V                | 20 mA               |
