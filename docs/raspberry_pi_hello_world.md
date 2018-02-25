@@ -5,4 +5,4 @@ The simplest would be a single LED but instead these instructions will skip to a
 
 ## Basic LED Diagram
 
-![LED Schema](images/Basic LED Diagram.svg)
+![LED Schema](images/Basic_LED_Diagram.svg)
