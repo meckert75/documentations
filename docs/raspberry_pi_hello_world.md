@@ -104,6 +104,37 @@ This will print the status of all pins of the Raspberry Pi.
  +-----+-----+---------+------+---+-Pi ZeroW-+---+------+---------+-----+-----+
 ```
 
+Control the Raspberry Pi using Python.
+
+Create a Python script `vim blink_led.py` and paste the below code.
+
+```python
+import RPi.GPIO as GPIO
+import time
+
+red = 17
+green = 27
+blue = 22
+
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(red, GPIO.OUT)
+GPIO.setup(green, GPIO.OUT)
+GPIO.setup(blue, GPIO.OUT)
+
+colors = [red, green, blue]
+for color in colors:
+    GPIO.output(color, GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(color, GPIO.LOW)
+```
+
+Run the script.
+
+```
+python blink_led.py
+```
+
 # References
 
 * [RGB LED Datasheet](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)
