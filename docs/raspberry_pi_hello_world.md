@@ -178,6 +178,85 @@ myPwm.stop()
 GPIO.setup(18, GPIO.IN)
 ```
 
+### Sample Code
+
+A sample UI that uses `tkinter` for the UI and PWM to control the LED could looke something like the following
+
+```pythin
+import tkinter as tk
+import RPi.GPIO as GPIO
+import time
+
+red = 18
+green = 23
+blue = 24
+
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+
+        GPIO.setmode(GPIO.BCM)
+
+        GPIO.setup(red, GPIO.OUT)
+        GPIO.setup(green, GPIO.OUT)
+        GPIO.setup(blue, GPIO.OUT)
+
+        self.redControl = GPIO.PWM(red, 240)
+        self.greenControl = GPIO.PWM(green, 240)
+        self.blueControl = GPIO.PWM(blue, 240)
+
+        self.redControl.start(0)
+        self.greenControl.start(0)
+        self.blueControl.start(0)
+
+        self.create_widgets()
+
+        colors = [self.redControl, self.greenControl, self.blueControl]
+        for color in colors:
+            for i in range(0, 101, 5):
+                time.sleep(0.050)
+                color.ChangeDutyCycle(float(i))
+                color.ChangeDutyCycle(0.000)
+                time.sleep(0.5)
+
+    def __del__(self):
+        self.redControl.stop()
+        self.greenControl.stop()
+        self.blueControl.stop()
+
+        # Reset Pins
+        GPIO.setup(red, GPIO.IN)
+        GPIO.setup(green, GPIO.IN)
+        GPIO.setup(blue, GPIO.IN)
+
+        print("Exiting application. All GPIOs reset")
+
+    def create_widgets(self):
+        tk.Label(self, text='Red').grid(row=0, column=0)
+        tk.Label(self, text='Green').grid(row=1, column=0)
+        tk.Label(self, text='Blue').grid(row=2, column=0)
+
+        redSlider = tk.Scale(self, from_=0, to=100, orient=tk.HORIZONTAL, command=self.updateRed)
+        redSlider.grid(row=0, column=1)
+        greenSlider = tk.Scale(self, from_=0, to=100, orient=tk.HORIZONTAL, command=self.updateGreen)
+        greenSlider.grid(row=1, column=1)
+        blueSlider = tk.Scale(self, from_=0, to=100, orient=tk.HORIZONTAL, command=self.updateBlue)
+        blueSlider.grid(row=2, column=1)
+
+    def updateRed(self, val):
+        self.redControl.ChangeDutyCycle(float(val))
+
+    def updateGreen(self, val):
+        self.greenControl.ChangeDutyCycle(float(val))
+
+    def updateBlue(self, val):
+        self.blueControl.ChangeDutyCycle(float(val))
+
+root = tk.Tk()
+app = Application(master=root)
+app.mainloop()
+```
 
 # References
 
