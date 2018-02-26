@@ -132,6 +132,10 @@ for color in colors:
     GPIO.output(color, GPIO.HIGH)
     time.sleep(1)
     GPIO.output(color, GPIO.LOW)
+
+GPIO.setup(red, GPIO.IN)
+GPIO.setup(green, GPIO.IN)
+GPIO.setup(blue, GPIO.IN)
 ```
 
 Run the script.
