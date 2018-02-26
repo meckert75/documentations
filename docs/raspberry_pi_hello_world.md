@@ -43,7 +43,7 @@ Using the formula, the resistors values can be calculated. To find the right res
 
 ## Connecting it All
 
-Putting it all together, the following diagram shows the RGB LED connected to GPIO 17, 22 and 27 respectively.
+Putting it all together, the following diagram shows the RGB LED connected to GPIO 18, 23 and 24 respectively.
 
 ![RGB LED connected to Raspberry Pi](images/raspberry_rgp_led_diagram.svg)
 
@@ -56,20 +56,20 @@ Power up the Raspberry Pi and open a `ssh` connection to the Pi. The simplest wa
 First set the GPIO mode of the used pins to output (write). The default of the GPIOs is input (read).
 
 ```
-gpio -g mode 17 out
-gpio -g mode 27 out
-gpio -g mode 22 out
+gpio -g mode 18 out
+gpio -g mode 23 out
+gpio -g mode 24 out
 ```
 
 The pins are ready to be written to.
 
 ```
-gpio -g write 17 1 # turn on red
-gpio -g write 17 0 # turn off red
-gpio -g write 27 1 # turn on green
-gpio -g write 27 0 # turn off green
-gpio -g write 22 1 # turn on blue
-gpio -g write 17 1 # turn on red (turns LED purple)
+gpio -g write 18 1 # turn on red
+gpio -g write 18 0 # turn off red
+gpio -g write 23 1 # turn on green
+gpio -g write 23 0 # turn off green
+gpio -g write 24 1 # turn on blue
+gpio -g write 18 1 # turn on red (turns LED purple)
 ```
 
 Check the status of the pins.
@@ -89,10 +89,10 @@ This will print the status of all pins of the Raspberry Pi.
  |   3 |   9 |   SCL.1 |   IN | 1 |  5 || 6  |   |      | 0v      |     |     |
  |   4 |   7 | GPIO. 7 |   IN | 1 |  7 || 8  | 0 | IN   | TxD     | 15  | 14  |
  |     |     |      0v |      |   |  9 || 10 | 1 | IN   | RxD     | 16  | 15  |
- |  17 |   0 | GPIO. 0 |  OUT | 1 | 11 || 12 | 0 | IN   | GPIO. 1 | 1   | 18  |
- |  27 |   2 | GPIO. 2 |  OUT | 0 | 13 || 14 |   |      | 0v      |     |     |
- |  22 |   3 | GPIO. 3 |  OUT | 1 | 15 || 16 | 0 | IN   | GPIO. 4 | 4   | 23  |
- |     |     |    3.3v |      |   | 17 || 18 | 0 | IN   | GPIO. 5 | 5   | 24  |
+ |  17 |   0 | GPIO. 0 |   IN | 0 | 11 || 12 | 1 | OUT  | GPIO. 1 | 1   | 18  |
+ |  27 |   2 | GPIO. 2 |   IN | 0 | 13 || 14 |   |      | 0v      |     |     |
+ |  22 |   3 | GPIO. 3 |   IN | 0 | 15 || 16 | 0 | OUT  | GPIO. 4 | 4   | 23  |
+ |     |     |    3.3v |      |   | 17 || 18 | 1 | OUT  | GPIO. 5 | 5   | 24  |
  |  10 |  12 |    MOSI |   IN | 0 | 19 || 20 |   |      | 0v      |     |     |
  |   9 |  13 |    MISO |   IN | 0 | 21 || 22 | 0 | IN   | GPIO. 6 | 6   | 25  |
  |  11 |  14 |    SCLK |   IN | 0 | 23 || 24 | 1 | IN   | CE0     | 10  | 8   |
@@ -117,9 +117,9 @@ Create a Python script `vim blink_led.py` and paste the below code.
 import RPi.GPIO as GPIO
 import time
 
-red = 17
-green = 27
-blue = 22
+red = 18
+green = 23
+blue = 24
 
 GPIO.setmode(GPIO.BCM)
 
