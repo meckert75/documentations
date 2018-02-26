@@ -137,6 +137,12 @@ Run the script.
 python blink_led.py
 ```
 
+## End Result
+
+The wired up Raspberry Pi with the RGB LED looks something like the below image.
+
+![Final Raspberry Pi hooked up to RGB LED](images/final_raspberry_pi_rgb_led.jpg)
+
 # References
 
 * [RGB LED Datasheet](https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf)
