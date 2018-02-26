@@ -182,7 +182,7 @@ GPIO.setup(18, GPIO.IN)
 
 A sample UI that uses `tkinter` for the UI and PWM to control the LED could looke something like the following
 
-```pythin
+```python
 import tkinter as tk
 import RPi.GPIO as GPIO
 import time
