@@ -141,7 +141,7 @@ GPIO.setup(blue, GPIO.IN)
 Run the script.
 
 ```
-python blink_led.py
+python3 blink_led.py
 ```
 
 ## End Result
@@ -154,7 +154,30 @@ The wired up Raspberry Pi with the RGB LED looks something like the below image.
 
 For fun, this secion takes the control of the RGB LED one step further and allows a user to control the LED's brightness and color through a GUI.
 
-Instead of controlling the pins connected to the LED by simply pulling the pins high (on) or low (off), 
+Instead of controlling the pins connected to the LED by simply pulling the pins high (on) or low (off), the colors of the LED can be adjusted to select a desired brighness and hue. For the UI the library `tkinter` can be used.
+
+### Controlling LED Brightness
+
+To control an LED's brightness, the Pi's GPIO can be adjusted using [Pulse Width Modulation](https://en.wikipedia.org/wiki/Pulse-width_modulation) (PWM).
+
+Using the `RPi.GPIO` library, adjusting the output using PWM would work as followed:
+
+```python
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+myPwm = GPIO.PWM(18, 500)
+
+# start with 50% modulation
+myPwm.start(50)
+
+# Adjust modulation
+myPwm.ChangeDutyCycle(75.0)
+
+# Reset
+myPwm.stop()
+GPIO.setup(18, GPIO.IN)
+```
+
 
 # References
 
