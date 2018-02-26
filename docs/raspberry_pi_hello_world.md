@@ -148,7 +148,7 @@ python3 blink_led.py
 
 The wired up Raspberry Pi with the RGB LED looks something like the below image.
 
-![Final Raspberry Pi hooked up to RGB LED](images/final_raspberry_pi_rgb_led.jpg)
+![Final Raspberry Pi hooked up to RGB LED](images/final_raspberry_pi_rgb_led2.jpg)
 
 ## Hello Universe
 
