@@ -152,7 +152,7 @@ The wired up Raspberry Pi with the RGB LED looks something like the below image.
 
 ## Hello Universe
 
-For fun, this secion takes the control of the RGB LED one step further and allows a user to control the LED's brightness and color through a GUI.
+For fun, this section takes the control of the RGB LED one step further and allows a user to control the LED's brightness and color through a GUI.
 
 Instead of controlling the pins connected to the LED by simply pulling the pins high (on) or low (off), the colors of the LED can be adjusted to select a desired brighness and hue. For the UI the library [`tkinter`](https://docs.python.org/3/library/tkinter.html#) can be used.
 
