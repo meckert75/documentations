@@ -6,5 +6,7 @@ Collection of project notes while working with [Raspberry Pi](https://www.raspbe
 
 [Setting up a Raspberry Pi using another Pi](./raspberry_pi_setup2.md) - no keyboard, mouse, ethernet required
 
-## What Next
-[Turn the Rapsberry Pi into a Game Console](./raspberry_pi_retropie.md) - install RetroPie for some classic gameing
+[Raspberry Pi - Hello World](./raspberry_pi_hello_world.md) - Control some LEDs using the Raspberry GPIOs.
+
+## Projects
+[Turn the Rapsberry Pi into a Game Console](./raspberry_pi_retropie.md) - install RetroPie for some classic gameing (Work in Progress)
