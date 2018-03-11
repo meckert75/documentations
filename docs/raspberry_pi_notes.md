@@ -22,3 +22,8 @@ After enabling the Raspberry Camera and rebooting the Raspberry Pi, test the cam
 ```
 raspistill -o test.jpg -q 80 -w 640 -h 480
 ```
+## Install Docker
+
+```
+curl -sSL https://get.docker.com | sh
+```
