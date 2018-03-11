@@ -49,7 +49,7 @@ Take the SD card and insert it into the Raspberry Pi, connect the Pi to the netw
 
 Log into the Raspberry from the Mac.
 ```bash
-$ ssh ssh pi@raspberrypi.local
+$ ssh pi@raspberrypi.local
 $ sudo raspi-config
 ```
 The default password is `raspberry`. Changing the default password should be the first configuration change. 
