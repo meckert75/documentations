@@ -15,13 +15,34 @@ sudo apt-get upgrade
 sudo apt-get install vim
 ```
 
-## Capture Photos
+## Camera
+
+### Documentation
+* [Camera Module](https://www.raspberrypi.org/documentation/hardware/camera/README.md)
+* [Application Documentation](https://www.raspberrypi.org/documentation/raspbian/applications/camera.md)
+
+### Capture Photos
 
 After enabling the Raspberry Camera and rebooting the Raspberry Pi, test the camera.
 
 ```
 raspistill -o test.jpg -q 80 -w 640 -h 480
 ```
+
+### Capture Video
+*([more details](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspivid.md))*
+
+```
+raspivid -o vid.h264
+```
+
+### Wrap Videos in MP4
+
+```
+sudo apt-get install -y gpac
+MP4Box -add vid.h264 vid.mp4
+````
+
 ## Install Docker
 
 ```
