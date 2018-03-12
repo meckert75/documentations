@@ -75,3 +75,44 @@ if __name__ == '__main__':
 ### Resources
 * https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
 * https://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi
+
+## Servo Control
+
+A servo is a component that allows the angle of the rotating axis to be set to a precise angle. Unlike a motor, it doesn't continuously rotate.
+
+### Electronic Diagram
+
+### Code
+
+```python
+import RPi.GPIO as GPIO
+from time import sleep
+
+SERVO_GPIO = 23
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(SERVO_GPIO, GPIO.OUT)
+
+servo = GPIO.PWM(SERVO_GPIO, 50)
+servo.start(0)
+
+def setAngle(angle):
+    if angle >= 0 and angle <= 180:
+        duty = (angle / 18.0) + 2.5
+        servo.ChangeDutyCycle(duty)
+
+try:
+    while True:
+        angle = float(input("Enter Angle (0 - 180): "))
+        setAngle(angle)
+            
+except KeyboardInterrupt:
+    print("CTRL-C: Terminating program.")
+finally:
+    print("Cleaning up GPIO...")
+    servo.stop()
+    GPIO.cleanup()
+```
+### Resources
+* http://rpi.science.uoit.ca/lab/servo/
+* http://www.instructables.com/id/Servo-Motor-Control-With-Raspberry-Pi/
