@@ -11,6 +11,8 @@ object.
 
 ### Electronic Diagram
 
+![Raspberry Pi Ultrasonic Sensor Diagram](images/raspberry_ultrasonic_diagram.svg)
+
 ### Code
 
 ```python
@@ -22,7 +24,7 @@ import time
 GPIO.setmode(GPIO.BCM)
  
 #set GPIO Pins
-GPIO_TRIGGER = 18
+GPIO_TRIGGER = 23
 GPIO_ECHO = 24
  
 #set GPIO direction (IN / OUT)
