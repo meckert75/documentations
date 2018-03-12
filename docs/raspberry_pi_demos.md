@@ -72,7 +72,7 @@ if __name__ == '__main__':
 ```
 *Code from [tutorials-raspberrypi.com](https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/)*
 
-### Resources
+### References
 * https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
 * https://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi
 
@@ -114,6 +114,6 @@ finally:
     servo.stop()
     GPIO.cleanup()
 ```
-### Resources
+### References
 * http://rpi.science.uoit.ca/lab/servo/
 * http://www.instructables.com/id/Servo-Motor-Control-With-Raspberry-Pi/
