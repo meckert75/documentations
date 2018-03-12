@@ -82,6 +82,7 @@ A servo is a component that allows the angle of the rotating axis to be set to a
 
 ### Electronic Diagram
 
+![Raspberry Pi Servo Diagram](images/raspberry_servo_diagram.svg)
 ### Code
 
 ```python
