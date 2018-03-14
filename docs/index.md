@@ -8,7 +8,9 @@ Collection of project notes while working with [Raspberry Pi](https://www.raspbe
 
 [Raspberry Pi - Hello World](./raspberry_pi_hello_world.md) - Control some LEDs using the Raspberry GPIOs.
 
-## Notes
+## Additional Dcos
+
+[Raspberry Pi Demos](./raspberry_pi_demos.md) - Simple instructions to demonstrate using a Raspberry Pi to control or interact with various components.
 
 Random [Raspberry Pi Notes](./raspberry_pi_notes.md) collected while experimenting with different things.
 
