@@ -8,5 +8,9 @@ Collection of project notes while working with [Raspberry Pi](https://www.raspbe
 
 [Raspberry Pi - Hello World](./raspberry_pi_hello_world.md) - Control some LEDs using the Raspberry GPIOs.
 
+## Notes
+
+Random [Raspberry Pi Notes](./raspberry_pi_notes.md) collected while experimenting with different things.
+
 ## Projects
 [Turn the Rapsberry Pi into a Game Console](./raspberry_pi_retropie.md) - install RetroPie for some classic gameing (Work in Progress)
