@@ -44,6 +44,10 @@ $ sed -i -e "s/\(rootwait\)/\1 modules-load=dwc2,g_ether/" /Volumes/boot/cmdline
 ```
 Instead of hooking it up to the ethernet, the Raspberry Pi Zero W will connect to a USB port of the Mac.
 
+To establish a network connection over USB, your Raspberry Pi Zero W will have to be connected using the USB port and can't be confused with the power port. Both use the Micro USB standard but only the one on the left (closer to the HDMI port) can be used for data as well as powering the Pi.
+
+![Raspberry Pi Zero W Image](images/Pi-Zero-W.png)
+
 ## Final Steps
 Take the SD card and insert it into the Raspberry Pi, connect the Pi to the network via ethernet and connect it to the power to boot it up.
 
