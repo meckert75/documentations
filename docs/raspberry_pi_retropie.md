@@ -18,3 +18,7 @@ $
 * [github.com/RetroPie/RetroPie-Setup](https://github.com/RetroPie/RetroPie-Setup)
 * [retropie.org.uk/docs/First-Installation/](https://retropie.org.uk/docs/First-Installation/)
 * [retropie.org.uk/docs/Manual-Installation/](https://retropie.org.uk/docs/Manual-Installation/)
+
+<hr>
+
+Back to [Index](./index.md)
