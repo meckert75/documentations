@@ -75,3 +75,7 @@ passwd: password updated successfully
 # References
 * [caffinc.github.io/2016/12/raspberry-pi-3-headless/](https://caffinc.github.io/2016/12/raspberry-pi-3-headless/)
 * [wiki.archlinux.org/index.php/locale](https://wiki.archlinux.org/index.php/locale)
+
+<hr>
+
+Back to [Index](./index.md)
