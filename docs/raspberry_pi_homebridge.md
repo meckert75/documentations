@@ -192,3 +192,6 @@ Check that the service is running
 systemctl status homebridge
 ```
 
+<hr>
+
+Back to [Index](./index.md)
