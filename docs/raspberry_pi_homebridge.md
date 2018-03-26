@@ -192,6 +192,10 @@ Check that the service is running
 systemctl status homebridge
 ```
 
+Check homebridge logs
+```
+sudo journalctl -f -u homebridge
+```
 <hr>
 
 Back to [Index](./index.md)
